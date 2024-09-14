@@ -8,12 +8,13 @@ export default function App() {
   const[listaTareas, setListaTareas] = useState([]);
 
   const arrayTareas = (nuevaTarea) => {
-    setListaTareas([...listaTareas, {name: nuevaTarea}]);
+    const nueva = {id: Date.now(), name: nuevaTarea};
+    setListaTareas([...listaTareas, nueva]);
   };
-  const deleteItem = () => {
-    listaTareas.filter((tarea) => {tarea.id !== id})
-    console.log("asdasd");
-  }
+
+  const deleteItem = (id) => {
+    setListaTareas(listaTareas.filter((tarea) => tarea.id !== id));
+  };
 
 
   return (

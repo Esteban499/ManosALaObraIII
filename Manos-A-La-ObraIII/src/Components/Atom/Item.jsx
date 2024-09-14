@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Basurero from './Basurero'
 
-export default function Item(props, onDelete) {
+export default function Item({id, name, onDelete}) {
   const [checked, setChecked] = useState(false);
 
   const handleClick = () => {
@@ -9,15 +9,14 @@ export default function Item(props, onDelete) {
   };
 
   const handleDelete = () => {
-    onDelete(props.id);
-    console.log("handleDelete");
+    onDelete(id);
   }
   
   return (
     <div>
       <input type="checkbox" onClick={handleClick} />
       <span style={{ textDecoration: checked ? 'line-through' : 'none' }}>
-        {props.name}
+        {name}
       </span>
       <button onClick={handleDelete}>🗑️</button>
     </div>
