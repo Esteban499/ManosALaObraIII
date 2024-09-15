@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Titulo from './Components/Atom/Titulo'
+import SinTareas from './Components/Atom/sinTareas'
 import AgregarTarea from './Components/Molecule/AgregarTarea'
 import ListaTareas from './Components/Molecule/ListaTareas'
+
 
 export default function App() {
 
@@ -21,7 +23,7 @@ export default function App() {
     <div>
       <Titulo/>
       <AgregarTarea onAdd={arrayTareas}/>
-      {listaTareas.length > 0 ? <ListaTareas tareas={listaTareas} onDelete={deleteItem} />  : <h2> No hay tareas guardadas </h2>}
+      {listaTareas.length > 0 ? <ListaTareas tareas={listaTareas} onDelete={deleteItem} />  : <SinTareas/> }
     </div>
   )
 }

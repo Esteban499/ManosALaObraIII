@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Basurero from './Basurero'
+import './estilosAtom.css'
 
 export default function Item({id, name, onDelete}) {
   const [checked, setChecked] = useState(false);
@@ -13,12 +13,14 @@ export default function Item({id, name, onDelete}) {
   }
   
   return (
-    <div>
-      <input type="checkbox" onClick={handleClick} />
-      <span style={{ textDecoration: checked ? 'line-through' : 'none' }}>
-        {name}
-      </span>
-      <button onClick={handleDelete}>🗑️</button>
+    <div className="contenedor">
+      <div className="contenedora"> 
+        <input type="checkbox" onClick={handleClick} />
+          <span style={{ textDecoration: checked ? 'line-through' : 'none' }}>
+            {name}
+          </span>
+        <button onClick={handleDelete} className="basurero">🗑️</button> 
+      </div>
     </div>
   );
 }

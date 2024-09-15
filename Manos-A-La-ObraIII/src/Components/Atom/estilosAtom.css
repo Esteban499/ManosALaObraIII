@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.titulo{
+    text-align: center ;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sinTareas {
+    text-align: center ;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    gap: 4px; /* Espacio entre los checkboxes */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contenedora {
+    position: relative; /* o absolute, dependiendo de tus necesidades */
+    top: 20px; /* Mueve el contenedor 20px hacia abajo */
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #000000; /* Borde alrededor del rectángulo */
+    padding: 10px; /* Espacio interno para que el borde no esté pegado al contenido */
+    margin-bottom: 10px; /* Espacio entre los elementos */
+    width: 468px; /* Ancho deseado */
+    height: 20px;
+}
+
+input[type="checkbox"] {
+    border: 3px solid #000000;
+    width: 15px;
+    height: 15px;
+    
+}
+
+span{
+    width: 410px;
+}
+
+.basurero{
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+
+input[type="checkbox"] {
+    border: 3px solid #000000;
+    width: 15px;
+    height: 15px;
+    
+}
+
+
+
+

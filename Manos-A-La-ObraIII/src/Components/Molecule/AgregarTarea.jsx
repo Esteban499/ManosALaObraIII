@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './estilosMolecule.css'
 
 export default function AgregarTarea({onAdd}) {
   
@@ -18,15 +19,14 @@ export default function AgregarTarea({onAdd}) {
   };
 
   return (
-    <div>
+    <div className="Agregar">
       
         <input 
           type="text" 
-          placeholder="Ingrese una Tarea" 
           value={nuevaTarea}
           onChange={handleChange}
         />
-        <button type="submit" onClick={handleClick}>ADD</button>
+        <button className="boton" type="submit" onClick={handleClick}>ADD</button>
 
     
 
